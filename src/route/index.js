@@ -13,6 +13,8 @@ var header = {
   position: 'developer',
   salary: ' 200000',
   address: 'Ukrain, Odessa',
+
+
 };
 var footer = {
   social: {
@@ -23,6 +25,7 @@ var footer = {
     phone: {
       text: '+420773164125',
       href: 'tel:+420773164125',
+
 
     },
   },
@@ -85,47 +88,26 @@ router.get('/education', function (req, res) {
   res.render('education', {
     // ↙ сюди вводимо JSON дані
     page: {
-      title: 'resume',
+      title: 'resume | education',
     },
     header,
 
     main: {
-      certificates: [
-        {
-          name: 'test',
-          id: '345567',
 
-        }
-      ],
       educations: [
-        {
-          name: 'дет сад',
-          point: 10,
-          isEnd: true,
-        },
-        {
-          name: 'школа',
-          point: 9,
-          isEnd: false,
-        },
-        {
-          name: 'университет',
-          point: 10,
-          isEnd: true,
-        },
-        {
-          name: 'дикрет',
-          point: 7,
-          isEnd: false,
-        },
-        {
-          name: 'работа',
-          point: 6,
-          isEnd: true,
-        },
-
+        { name: 'дет сад', isEnd: true },
+        { name: 'школа', isEnd: true },
+        { name: 'университет', isEnd: true },
+      ],
+      certificates: [
+        { name: 'js pro', id: 76856 },
+        { name: 'js', id: 98766 },
+        { name: 'basik', id: 76876 },
 
       ],
+
+
+
     },
     footer,
 
@@ -176,6 +158,72 @@ router.get('/skills', function (req, res) {
         },
       ],
     },
+    footer,
+
+
+  })
+})
+
+
+
+// ================================================================
+router.get('/work', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('work', {
+    // ↙ сюди вводимо JSON дані
+    layout: 'big',
+    page: {
+      title: 'resume | work',
+    },
+    header,
+
+    main: {
+      works: [
+        {
+          position: 'junior Fullstack Developer',
+          company: {
+            name: 'git hub',
+            url: 'https://resume.com.ua/',
+          },
+          duration: {
+            from: '1.05.2023',
+            to: null,
+          },
+          projectAmount: 3,
+          projec: [
+            {
+              name: 'resume',
+              url: 'https://github.com/',
+              about: 'сайт про технологии',
+              stacks: [
+                {
+                  name: 'react. js',
+                },
+                {
+                  name: 'html/ css',
+                },
+                {
+                  name: 'nodejs',
+                },
+              ],
+              awards: [
+                {
+                  name: 'я учюсь в этой школе'
+                },
+                {
+                  name: 'мне очень нравится'
+                },
+              ],
+            },
+
+          ],
+        },
+      ],
+
+
+    },
+
+
     footer,
 
 

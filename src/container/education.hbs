@@ -7,28 +7,29 @@
   {{#with main}}
   <main>
     <section>
-        {{> title data= "my education"}}
-        
-        <ul>
-          {{#each certificates}}
-         
-           <li>{{name}}</li>
-           <li>{{id}}</li>
-            {{/each}}
-            
+       <h1> {{> title data= "my education" big=true}}</h1>
+  
+  <ul>
+    {{#each  educations}}
+      <li>
+        {{name}}
+       {{#unless isEnd}}(в процуссу){{/unless}}
+      </li> 
+      {{/each}}
+       </ul>
+      </section>
 
-          
-            {{#each educations}}
-            <li>
-              {{name}}
-               {{#if point includeZero=true}}({{point}}) {{/if}}
-                {{#if isEnd}}  {{/if}}
-               
-               {{#unless point includeZero=true}}( в процессе) {{/unless}}
-            </li>
-            {{/each}}
-        </ul>
+      <section>
+     {{> title data= "my certificates"}}
+    <ul>
+       {{#each certificates}}
+       <li>
+        {{name}} ({{id}})
+       </li>
+        {{/each}}
+    </ul>
     </section>
+   
   </main>
    {{/with}}
 </div>
