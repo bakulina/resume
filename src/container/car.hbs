@@ -1,0 +1,163 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+ <ul>
+{{make}}
+<br>
+{{model}}
+<br>
+{{year}}
+<br>
+{{color}}
+{{#with features }}
+{{#with interior }}
+{{#with seats}}
+{{material}}
+<br>
+{{color}}
+<br>
+{{ heated}}
+<br>
+{{ventilated}}
+{{/with}}
+<hr>
+{{#with  dashboard }}
+{{material}}
+<br>
+{{color}}
+<br>
+{{#with  display }}
+{{type}}
+<br>
+{{size}}
+<br>
+{{resolution}}
+<br>
+{{ touchscreen}}
+{{/with}}
+{{/with}}
+{{#with audio}} 
+<br>
+{{system}}
+<br>
+{{speakers}}
+<br>
+{{ subwoofer}}
+<br>
+{{ bluetooth}}
+<br>
+{{USB}}
+{{/with}}
+{{/with}}
+<hr>
+{{#with  exterior}}
+{{#with wheels}}
+{{size}}
+<br>
+{{type}}
+<br>
+{{color}}
+{{/with}}
+<hr>
+{{#with headlights}}
+{{type}}
+<br>
+{{ brightness}}
+<br>
+{{automatic}}
+{{/with}}
+{{#with sunroof}}
+{{type}}
+<br>
+{{size}}
+<br>
+{{ automatic}}
+{{/with}}
+{{/with}}
+<hr>
+{{#with safety}}
+{{#with airbags}} 
+<br>{{front}}
+<br>
+{{knee}}
+<br>
+{{side}}
+<br>
+{{rear}}
+{{/with }}
+<hr>
+{{#with  assistance}}
+{{ blind_spot_monitoring}}
+<br>
+{{rear_cross_traffic_alert}}
+<br>
+{{lane_departure_warning}}
+<br>
+{{adaptive_cruise_control}}
+<br>
+{{adaptive_cruise_control}}
+{{/with}}
+{{/with}}
+{{/with}}
+<hr>
+{{#with engine}}
+{{type}}
+<br>
+{{displacement}}
+<br>
+{{displacement}}
+<br>
+{{torque}}
+<br>
+{{#with transmission}}
+{{type}}
+<br>
+{{ gears}}
+{{/with}}
+{{/with}}
+<hr>
+{{#with  fuel_economy}}
+{{city}}
+<br>
+{{  highway}}
+<br>
+{{combined}}
+{{/with}}
+<hr>
+{{#with price}}
+{{base}}
+<br>
+{{ destination}}
+<br>
+{{#with options}}
+{{navigation}}
+<br>
+{{  premium_paint}}
+{{/with}}
+<br>
+{{total}}
+{{/with}}
+
+
+    
+ 
+
+ </ul>
+    </div>
+       
+        
+       
+                
+           
+       
+        
+        
+
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
