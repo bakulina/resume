@@ -48,7 +48,7 @@ router.get('/task22', function (req, res) {
     },
     section: {
       about_us: {
-        title_list: {
+        about_us: {
           main: 'InnovaMind',
           sub: 'InnovaMind is a forward-thinking startup focused on innovation. We are dedicated to creating efficient and powerful software through the use of first-class functions.',
         },
@@ -96,8 +96,8 @@ router.get('/task22', function (req, res) {
 
 
 })
-  //                  ↑↑ сюди вводимо JSON дані
-})
+//                  ↑↑ сюди вводимо JSON дані
+
 
 // ================================================================
 
