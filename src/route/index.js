@@ -206,6 +206,7 @@ router.get('/work', function (req, res) {
                   name: 'nodejs',
                 },
               ],
+              awardAmount: 2,
               awards: [
                 {
                   name: 'я учюсь в этой школе'
@@ -229,93 +230,110 @@ router.get('/work', function (req, res) {
 
   })
 })
-
-
-
-
 // ================================================================
-
-
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/task21', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('task21', {
-    layout: 'basik',
-
-    heading: {
-      main: {
-        title: 'JavaScript',
-        text: 'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
-        button_text: {
-          solid: 'Open page',
-          outline: 'Add to cart',
-        },
+router.get('/person', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('person', {
+    layout: 'person',
+    person: {
+      name: 'Emma Johnson',
+      age: 32,
+      gender: 'Female',
+      address: {
+        street: '123 Main St',
+        city: 'New York',
+        state: 'NY',
+        zip: '10001',
+        country: 'USA',
       },
-      second: {
-        title: 'Stack Overflow',
-        text: 'First-class functions',
-        button_text: {
-          solid: 'Open page',
-          outline: 'Add to cart',
-        },
-      },
-      subblock: {
-        title: 'JavaScript Weekly',
-        text: 'Prototype-based inheritance newsletter',
-        button_text: {
-          solid: 'Open page',
-          outline: 'Add to cart',
-        },
-      },
-    },
-    nested_display: {
-      title: 'HTML',
-      children_display: {
-        title: 'Outdated HTML tags',
-        text: 'tags that have been identified as deprecated and not recommended for use in HTML version 5',
-        button: {
-          text: 'Орen',
-        },
-      },
-      header_text: 'Sections',
-      button: {
-        text: 'Learn more',
-      },
-    },
-    paragraph: {
-      title: 'About modules',
-      text: 'Modules with import/export statements',
-
-      button: {
-        text: 'Open link page',
-        url: 'https://google.com',
-      },
-      list_name: [
+      education: [
         {
-          text: 'Github',
-          url: 'https://github.com/',
+          degree: 'Bachelor of Science',
+          major: 'Computer Science',
+          university:
+            'Massachusetts Institute of Technology',
+          graduationYear: 2012,
         },
+      ],
+      workExperience: [
         {
-          text: 'Bootstrap',
-          url: 'https://getbootstrap.com/',
+          company: 'Google',
+          title: 'Software Engineer',
+          startDate: '2012-06-01',
+          endDate: '2016-12-31',
+          responsibilitie: [
+            'Developed new features for Google Maps',
+            'Worked on improving search algorithms',
+          ],
+          year_founded: 1990,
+          industry: 'Technology',
+          employees: [
+            {
+              name: 'John Smith',
+              position: 'CEO',
+              department: 'Executive',
+              projects: [
+                {
+                  name: 'Project Alpha',
+                  description:
+                    'Developing new software platform',
+                  status: 'In Progress',
+                  teams: [
+                    {
+                      team_name: 'Awesome Team',
+                      team_leader: {
+                        name: 'John Smith',
+                        title: 'Team Leader',
+                        email: 'john.smith@example.com',
+                      },
+                      team_members: [
+                        {
+                          name: 'Alice Johnson',
+                          title: 'Software Engineer',
+                          email:
+                            'alice.johnson@example.com',
+                          skills: ['Java', 'Python', 'SQL'],
+                          projects: [
+                            {
+                              name: 'Project A',
+                              description:
+                                'Lorem ipsum dolor sit amet',
+                              technologies: [
+                                'Java',
+                                'Spring Framework',
+                              ],
+                              team_members: [
+                                {
+                                  name: 'Bob Lee',
+                                  title:
+                                    'Software Engineer',
+                                },
+                                {
+                                  name: 'Cindy Chen',
+                                  title: 'UI Designer',
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
         },
       ],
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
 // ================================================================
 
 
 
-
+})
 
 // ================================================================
 
-
-// Підключаємо роутер до бек-енду
-module.exports = router
