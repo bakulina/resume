@@ -645,6 +645,5 @@ router.get('/task31', function (req, res) {
 
 // Підключаємо роутер до бек-енду
 module.exports = router
-=======
 
 
