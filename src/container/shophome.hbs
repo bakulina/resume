@@ -1,0 +1,116 @@
+
+
+  <div class="card"  >
+ <div class="row ms-5">
+  <div class="col-12"  >
+<ol class="breadcrumb">
+    <li class="breadcrumb-item ">      
+{{#with  navigation}}
+{{#each links}}
+<a href={{href}}>{{text}}</a>
+{{/each}}
+{{/with}}
+<li>
+</li>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="card-body">
+{{#with newsBlock}}
+<h2>{{title}}</h2>
+<div class="row ">
+{{#each cards}}
+    <div class="col-2">
+<div class="card text-centr">
+    <div class="card- header bg-success">  
+<span class="badge text-bg-warning">{{isTop}}</span>   
+<span class="badge text-bg-danger">{{isNew}}</span>     
+  {{title}}  
+</div> 
+<div class="bg-light">
+{{description}}
+</div>
+</div>
+</div>
+{{/each}}
+</div>
+{{/with}}
+</div>
+<br>
+<div class="card">  
+    {{#with goodsBlock}}
+    <div class="row">
+        {{#each tabs}}
+        <div class="col-2">
+     <div class="card-header"> 
+        <span class="badge text-bg-warning">{{isActive}}</span> 
+       <span class="badge text-bg-danger">{{isDisabled}}</span> 
+        <a href=>{{text}}</a>
+          </div>
+          </div>
+        {{/each}}
+    </div>
+    <br>
+   <div class="card">
+    <div class="card img-top">
+      <div class=" row g-2">
+      {{#each cards}}
+     
+        <div class="card col-4">
+        
+        <img src="https://picsum.photos/400/200"alt=>
+      <h6>{{title}}</h6>
+        
+        {{description}}
+        <span>
+     <button class="btn btn-primary btn-sm">{{isHot}}</button>
+      <button class="btn btn-warning btn-sm">{{isNew}}</button>
+     </span>
+      </div>
+    
+      {{/each}}
+    </div>
+   </div>
+   </div>
+
+    {{/with}}
+
+<div class="card">
+<ul class="nav flex-column ">
+  <li class="nav-item ">
+    {{#with subscribe }}
+   <h5>{{header}}</h5> 
+    {{description}}
+    {{#each buttons}}
+    <a class="nav-link active"  href="{{link}}">{{text}}</a>
+    {{/each}}
+    {{/with}}
+  </li>
+  <li class="nav-item">
+    {{#with service}}
+    <h5>{{title}}</h5>
+    {{description}}
+    {{#each buttons}}
+    <li>
+      <a class="btn btn-primary"  href="{{link}}">{{text}}</a>
+      </li>
+    {{/each}}
+    {{/with}}
+  </li>
+</ul>
+</div>
+{{#each footer}}
+<div class="card-footer">
+{{#each this}}
+<a href="{{link}}">{{text}}</a>
+{{/each}}
+</div>
+{{/each}}
+
+  
+  
+
+
+
