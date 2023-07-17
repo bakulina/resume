@@ -1,0 +1,111 @@
+ <div class="text-center">
+ 
+ <div class="card">
+  <div class="card-body">
+    <h3>
+   {{#with  heading }}
+   {{#with main}}
+   {{title}}
+   <br>
+   </h3>
+   {{text}}
+   <button type="button" class="btn btn-info">
+    {{#with  button_text}}
+    {{solid}}
+    </button>
+    <br>
+    <br>
+    <button type="button" class="btn btn-outline-primary">
+    {{outline}}
+    </button>     
+   {{/with}}   
+   {{/with}}
+   </div>
+   </div>
+   <div class="card">
+    <div class="card-body">
+   {{#with second}}
+   <h3>{{title}}</h3>
+   {{text}}
+   <br>
+   <button type="button" class="btn btn-secondary">
+  {{#with button_text}}
+  {{solid}} 
+  </button>
+  <br>
+  <br>
+<button type="button" class="btn btn-outline-success">
+{{outline}} 
+<br> 
+</button>
+  {{/with}}
+   {{/with}}  
+   {{/with}}
+ </div>
+ </div>
+ <div class="card">
+    <div class="card-body">
+    {{#with  nested_display }}
+    {{title}}
+    {{#with children_display }}
+    <br>
+    {{title}}
+    <br>
+    {{text}}
+    {{#with button}}
+    <button type="button" class="btn btn-success">
+    {{text}}
+    <br>
+    </button>
+    {{/with}}
+    {{/with}}
+    <br>
+    {{header_text}}
+    <br>
+    {{#with button}}
+    <button type="button" class="btn btn-outline-secondary">
+      {{text}}  
+    </button>
+    {{/with}}
+    {{/with}}
+    <hr>
+    {{#with paragraph}}
+    {{title}}
+    <br>
+    {{text}}
+    <br>
+    {{#with button}}
+    <a class="btn btn-primary" href="#" role="button">
+    {{text}} 
+    </a>
+    <a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">
+        {{url}}
+    </a>
+    {{/with}}
+    {{#each list_name}}
+    <br>
+    {{text}}
+    <br>
+   <a href=>"{{url}}"</a> 
+    {{/each}}
+
+    {{/with}}
+    </div>
+ </div>
+</div>
+
+
+
+        
+       
+                
+           
+       
+        
+        
+
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}

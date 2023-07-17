@@ -7,49 +7,26 @@
 
   <head>
     <title>
-      {{page.title}}
+      program
     </title>
     <meta charset='utf-8' />
     <link href='css/index.css' rel='stylesheet' />
   </head>
-
-  <body>
-   
-   
+  
 
 
+    
+       
+        
+     
+    
    
      
     {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   --}}
     {{{body}}}
-
     
-
-    {{#with footer}}
-     <footer>
-        <div>
-        {{#with social}}
-        {{> link text=email.text href=email.href blank=true }}
-        {{> link text=phone.text href=phone.href blank=true }}
-        {{> link data=linkedin blank=true }}
        
       
-        {{/with}}
-        </div>
-        <br>
-        <div>
-          <em>Copyright {{../header/name/firstname}} {{../header/name/lastname}}</em>
-        </div>
-        <div>
-          <address>
-            {{../header/address}}
-          </address>
-        </div>
-        
-
-
-    </footer>
-    {{/with}}
-  </body>
+ 
 
 </html>
