@@ -1,0 +1,151 @@
+<ul>
+ <div>
+    <div class="card">
+        <div class="nav">
+            
+    {{#with navigation}}
+    {{#each links}}
+    <a class="nav-link active" aria-current="page" href="{{href}}">{{text}}</a>
+    {{/each}}
+    {{/with}}
+</div>
+    </div>
+ </div>
+
+
+{{#with header}}
+<h1>{{title}}</h1>
+{{#with button}}
+<a class="btn btn-info" href="{{link}}">{{text}}</a>
+<hr>
+{{/with}}
+{{/with}}
+
+  <div class="row g-3 ">
+    {{#each goodsBlock}}   
+     <div class="card">
+      <div class="row">
+    <div class="col-2 md-3">
+      <div class="mt-3">
+      <img src="{{image}}" class="img-fluid rounded-start" alt="{{name}}">
+    </div> 
+    </div> 
+   
+    <div class="col-4">       
+       {{ description}}   
+    </div> 
+     <div class="col-2">
+    {{#with price}}
+    {{title}}
+    <br>
+    {{value}}
+   
+    {{/with}}
+    </div>  
+    <div class="col-2">
+        1шт
+    </div>  
+     
+    <div class="col-2 ">
+      {{#each buttons}}
+      <div class="mb-3">
+      <div class="mt-3">
+      <button type="button"class="btn{{#if isPrimary}} btn-primary{{/if}}
+      {{#if isDanger}}btn-outline-danger{{/if}}">{{text}}</button>
+    </div>  
+    </div>  
+      {{/each}}
+    </div>  
+    </div>  
+    </div>    
+   {{/each}} 
+    </div> 
+    </div> 
+    <hr>
+   {{#with total}} 
+ <h3>{{title}}</h3>
+ <h4>{{amount}}</h4>
+ <h6>{{delivery}}</h6>
+ {{#each buttons}}
+ <div class="col-6">
+  <div class="mb-3">
+  <a href="{{link}}">
+<button type="button"class="btn{{#if isSuccess}} btn-success
+      {{else}}btn-outline-success{{/if}}">{{text}}</button>
+
+    </a>  
+   </div>   
+   </div>   
+ {{/each}}
+  {{/with}}
+    <hr>
+    {{#with goodsOtherBlock}}
+  <u>
+ <h3>{{title}}</h3>
+   </u>
+
+
+
+   
+
+  <div class="row ">
+  {{#each cards}}
+    <div class="col-4">
+   <div class="card">
+  
+      <img src="{{image}}" class="img-fluid rounded-start" alt="">
+     {{title}}
+    
+    
+     <h6>{{#if isHot}} <span class="badge bg-warning">Hot</span>{{/if}}</h6>
+     <h6>{{#if idNew}} <span class="badge bg-danger">New</span>{{/if}}</h6>
+    
+
+
+
+
+
+    
+
+
+      {{description}}
+    </div> 
+    </div>
+    {{/each}}
+    </div>
+{{/with}}
+<hr>
+{{#with subscribe}}
+<div class="card">
+ <div class="badge bg-dark text-wrap text-centr">
+  <h4>{{header}}</h4>
+
+  {{description}}
+  {{#each buttons}}
+ <p>
+<a href="{{link}}"class="btn btn-primary">{{text}}</a>
+</p>
+  {{/each}}
+</div>
+ </div>
+{{/with}}
+  {{#each footer}}
+<div class="row">
+  {{#each this}}
+    <div class="col-2 mb-2 ">
+  <div class="nav nav-underline">
+  <li class="nav-item">
+    <a class="nav-link active" href="{{link}}">{{text}}</a>
+  </li>
+    </div>
+
+    </div>
+  {{/each}}
+</div>
+  {{/each}}
+
+
+ 
+    
+
+
