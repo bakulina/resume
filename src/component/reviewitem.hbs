@@ -1,0 +1,76 @@
+
+
+
+  {{#with formBlock}}   
+  <h4>{{header}}</h4>
+  {{#with rating}}
+  {{title}}:
+  {{value}}
+  {{/with}}
+  </ul> 
+  <br>              
+  <br> 
+     {{#with actionBlock}}
+ <div class="nav nav-tabs">
+     {{#each tabs }}  
+  <li class="nav-item">
+    <a class="nav-link {{#if @first}}active  {{/if}}" aria-current="page" href="#">{{text}}</a>
+  </li>  
+{{/each}}
+</div>
+
+  {{#with report}}
+<div class="row p-3">
+    <h5> {{title}}</h5>
+    <div class="col-8">
+    {{#with button}}
+ <a href="{{link}}"class="btn btn-secondary" >{{text}}</a>  
+    {{/with}}    
+  {{/with}}  
+{{/with}}  
+   <br>
+  <hr>
+  {{#with feedbackBlock }} 
+  <h3>{{title}}</h3>
+  <br>
+  {{#each buttons}}
+ <a href="{{link}}"class="btn {{#if isWarning}} btn btn-warning {{/if}}btn {{#if isSuccess}} btn btn-success{{/if}} btn{{#if isDanger}} btn btn-danger{{/if}}">{{text}}</a> 
+  {{/each}}
+  {{/with}}
+        </div>
+        <div class="col-4  ">
+  <div class="card">
+   <div class="card-body">
+     {{#with goodsInfo }}  
+     <img src="{{photo}}" >
+</div>
+<h5>{{name}}</h5>
+</div>
+<br>
+ <div class="card">
+    <div class="card-body">
+ <h6> {{price}}</h6>
+ {{#each buttons}}
+ <p>
+ <a href="{{link}}" class="btn {{#if isPrimary}} btn btn-primary {{/if}} btn {{#if isSecondary}} btn btn-secondary{{/if}}" >{{text}}</a>
+ </p>
+ {{/each}}
+    </div>
+ </div> 
+
+ <div class="card">
+    <div class="card-body">
+        {{#with seller}}
+        {{title}}:
+        <h6>{{value}}</h6>
+        {{/with}}
+    </div>
+ </div>     
+     {{/with}}    
+</div>
+</div>
+  {{/with}} 
+
+
+
+
