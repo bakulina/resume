@@ -1,0 +1,61 @@
+ 
+
+  <div class="nav">
+{{#with purchase}}
+<div class="nav nav-tabs">
+{{#each tabs}}
+    <div class="nav-item">
+
+  <a class="nav-link {{#if @first}}active{{/if}}" aria-current="page" href="">{{this}} </a>
+
+</div> 
+{{/each}}
+</div> 
+</div> 
+<br>
+{{#with actionBlock }}
+{{#with input}}
+<input placeholder="{{placeholder}}">
+{{/with}}
+{{#each buttons}}
+<a href="{{links}}"class="btn {{#if isSuccess}} btn-success{{/if}} {{#if isOutline}}btn btn-outline-success {{/if}}{{#if isDanger}}btn btn-outline-danger{{/if}}" >{{text}}</a>
+{{/each}}
+{{/with}}
+<hr>
+<ul>
+<div class="row g-1">
+ {{#each itemList}}
+  <hr>
+<div class="col-4">
+  {{number}}
+  {{status}}
+</div>
+<div class="col-2 ">
+  {{#with amount}}
+  {{title}}
+  {{value}}
+  {{/with}}
+ </div> 
+ 
+ <div class="col-4 ">
+  {{#each images}}
+
+  <img src="https://picsum.photos/50/40">
+  {{/each}}
+
+   </div>
+ <div class="col-2">
+  {{#with button}}
+  <a class="btn btn-primary" href="{{link}}" type="button">{{text}}</a>
+  {{/with}}
+   </div>
+  {{/each}}
+</div>
+</ul>
+{{/with}}
+
+
+
+
+
+
