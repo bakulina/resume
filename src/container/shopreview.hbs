@@ -1,0 +1,146 @@
+<ul>
+<div class="nav">
+    <div class="nav-item">
+        {{#with navigation }}
+        {{#each links}}
+     <a href="{{href}}">{{text}}</a>   
+        {{/each}}
+        {{/with}}
+    </div>
+</div>
+</div>
+ </ul>   
+ <hr> 
+ <ul>
+
+
+{{>reviewitem}}
+
+
+
+
+
+  {{#each reviewList}} 
+  {{#with title}}
+  <div class="card">
+   <div class="card-body">
+    <h5>{{userName}}</h5>  
+    {{ caption}}
+   <p> {{date}}</p>
+   </div>
+  </div>
+  {{/with}}
+  <div class="card">
+   <div class="card-body">
+   {{#with   reviewBody }}
+   {{#with seller}}
+<h6>{{title}}</h6>
+<h6>{{value}}</h6>
+   {{/with}}
+   {{#with rating }}
+   {{title}}
+   {{value}}
+   {{/with}}
+   {{#each text}}
+<p>  {{this}}</p>
+   {{/each}}
+   {{#with advantages}}
+   <h6>{{title}}</h6>
+   {{text}}
+   <br>
+   {{/with}}
+   {{#with disadvantages}}
+   <p>
+  <h6>{{title}}</h6>  
+  {{text}}
+  </p>
+   {{/with}}
+   {{#each images}}
+   <img src="{{this}}">
+   {{/each}}
+  </div>
+</div>
+
+<div class="card">
+   <div class="card-body">
+   <div class="card-item">
+      {{#each coments}}
+<hr>
+<u>{{userName}}</u>
+
+<p>{{date}}</p>
+<p>{{text}}</p>
+   {{/each}}
+</div>
+</div>
+</div>
+   {{/with}}
+ <br>  
+ <br>
+ <div class="card">
+<div class="card-body">
+   {{#with title}}
+   <h6>{{userName}}</h6>
+   {{caption}}
+   <p> {{date}}</p> 
+   {{/with}}
+   <div class="card">
+<div class="card-body">
+   {{#with reviewBody }}
+   {{#with seller}}
+   <h6>{{title}}</h6>
+   {{value}}
+   {{/with}}
+   {{#with rating}}
+   <br>
+   {{title}}:
+   {{value}}
+   {{/with}}
+   {{#each text}}
+  <p> {{this}}</p>
+   {{/each}}
+   {{#with advantages }}
+   <h6>{{title}}</h6>
+   {{text}}
+   {{/with}}
+   {{#with disadvantages}}
+   <h6>{{title}}</h6>
+   {{text}}
+   {{/with}}
+   {{/with}}
+</div>
+</div>
+ </div>  
+ </div>  
+  {{/each}}
+  <br>
+  {{#with service}}
+  <div class="card">
+<div class="card-body">
+   <div class="card-body bg-success">
+   <h5 class="card-title">{{title}}</h5>
+   <p class="card-text">{{description}}</p>
+   {{#each buttons}}
+   <a href="{{link}}"class="btn btn-primary">{{text}}</a>
+   {{/each}}
+</div>
+  </div>
+  </div>
+  {{/with}}
+ <br>
+
+ <ul class="nav">
+   <li class="nav-item">
+
+   </li>
+ </ul>
+ {{#each footer}} 
+ {{#each this}}
+       <a class="nav- link active"aria-current="page"href="{{link}}">{{text}}</a>
+{{/each}}
+{{/each}}
+        
+        
+
+
+
