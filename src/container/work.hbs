@@ -40,8 +40,38 @@
     <ul>
       {{#each projects}}
       <li>
-        <div>{{> link text= project.name href=project.url blank=true noline=true}}</div>
+        <div>{{> link text=name href=url blank=true noline=true}}</div>
+       <br>
+       <div>
+        <p>{{about}}</p>
+       </div>
+       <br>
+       <div>
+        <ul>
+          {{#each stacks}}
+          <li>{{name}}</li>
+          {{/each}}
+        </ul>
+       </div>
+       <br>
+       <div>
+        <em>project awards ({{awardAmount}})</em>
+       </div>
+       <br>
+       <div>
+        <ul>
+          {{#each awards}}
+          <li>{{name}}</li>
+          {{/each}}
+        </ul>
+       </div>
+
+
+
+
       </li>
+
+        
        {{/each}}
 
       
