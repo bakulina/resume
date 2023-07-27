@@ -230,7 +230,17 @@ router.get('/work', function (req, res) {
   })
 })
 
+// ================================================================
+router.get('/home', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('home', {
+    // ↙ сюди вводимо JSON дані
+    layout: 'home',
+  })
+})
 
 // Підключаємо роутер до бек-енду
 module.exports = router
+
+
 
