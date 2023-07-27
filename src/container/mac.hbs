@@ -2,30 +2,35 @@
 
    
  <div class="card">
+  <div class="row">
     <div class="card body">
+  <div class="col-6">
     <ul>
     <h3>{{name}}</h3>
    <h5> {{description}}</h5>
     <h6> {{ price}}$</h6>
-    </div>
     
    <h6>{{category}}</h6>
+   <hr>
     {{#with features}}
     {{#with processor}}
-  <li>{{brand}}</li>
+ <h6>{{brand}}</h6>
   <li>{{model}}</li>
   <li>{{speed}}</li>
    <li>{{cores}}</li> 
-  <li>{{cache}}</li>   
+  <li>{{cache}}</li>  
+  <hr> 
     {{/with}}
     {{#with memory}}
     <li>{{type}}</li>
     <li>{{size}}</li>
     <li>{{speed}}</li>
+    <hr>
     {{/with}}
     {{#with storage}}
     <li>{{type}}</li>
     <li>{{size}}</li>
+    <hr>
     {{/with}}
     {{#with display}}
     <li>{{size}}</li>
@@ -34,22 +39,25 @@
     <li>{{ color_space}}</li>
     <li>{{ brightness}}</li>
     <li>{{refresh_rate}}</li>
+    <hr>
     {{/with}}
     {{#with graphics}}
-    <li>{{brand}}</li>
+    <h6>{{brand}}</h6>
     <li>{{model}}</li>
     <li>{{memory}}</li>
+    <hr>
     {{/with}}
     {{#each ports}}
-    <li>{{type}}</li>
+   <h6>{{type}}</h6>
     <li>{{count}}</li>
     {{#each graphics }}
     <li>{{this}}</li>
     {{/each}}
+    <hr>
    
     {{/each}}
     {{#with battery}}
-    <li>{{type}}</li>
+   <h6>{{type}}</h6>
    <li>{{capacity}}</li> 
    <li>{{life}}</li>
     {{/with}}    
@@ -60,6 +68,7 @@
     <li>{{width}}</li>
     <li>{{depth}}</li>
     {{/with}}
+    <hr>
     <h6>{{ operating_system}}....</h6>
     {{#each accessories }}
     <li>{{name}}</li>
@@ -67,6 +76,10 @@
     {{/each}}
     {{/with}} 
     </ul>      
+   </div>    
+   </div>    
+   </div>    
+   </div>    
    </div>    
    
      <img class=" lg-image"src="https://files.refurbed.com/ii/macbook-pro-2019-133-tb-1661507926.jpg?t=resize&h=630&w=800">  
